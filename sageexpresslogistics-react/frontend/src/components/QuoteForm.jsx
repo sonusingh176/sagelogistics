@@ -1,4 +1,7 @@
-import { useState } from "react";
+import React from 'react';
+import { useState , useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
 
@@ -19,14 +22,12 @@ const QuoteForm = () => {
 
       const res = await axios.post('http://localhost:8000/v1/save-quote-form', formData);
       console.log(res.data.message);
+      toast.success(res.data.message);
       
     } catch (error) {
       console.log(error);
-      
+      toast.error("An error occurred. Please try again.");
     }
-
-
-    //console.log("Form submitted:", formData);
 
   }
 
@@ -54,7 +55,7 @@ const QuoteForm = () => {
               <div style={{height:"auto"}}/>
                   
                   <div className="mb-3 mt-4 py-2 pb-2">                      
-                      <input type="text"  className="form-control p-2" name="user_name" value={formData.user_name} onChange={handleChange} id="user_name" placeholder="Your Name" required/>
+                      <input type="text"  className="form-control p-2" name="user_name" value={formData.user_name} onChange={handleChange} id="user_name" placeholder="Your Name" />
                       
                   </div>
     
@@ -77,6 +78,8 @@ const QuoteForm = () => {
               <div className="text-center">
                 <button type="submit" className="btn btn-success modal-submit-btn rounded-0 submitQuotebtn">Submit</button></div>
             </form>
+
+            <ToastContainer />
 
           </div>
         </div>

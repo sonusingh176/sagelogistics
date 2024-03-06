@@ -7,12 +7,12 @@ import Contact from './pages/contact';
 import About from './pages/about';
 import Partner from './pages/partner';
 import Fulltrackload from './pages/fulltrackload';
-import PartTruckload from './pages/parttruckload';
-import Minitruckload from './pages/minitruckload';
+import PartTruckload from './pages/PartTruckload';
+import Minitruckload from './pages/MiniTruckLoad';
 import Personalcourier from './pages/personalcourier';
-import PackersMovers from './pages/packersmovers';
-import IndustrialLogistics from './pages/industriallogistics';
-import EcommerceCourier from './pages/ecommerceCourier';
+import PackersMovers from './pages/PackersMovers';
+import IndustrialLogistics from './pages/IndustrialLogistics';
+import EcommerceCourier from './pages/EcommerceCourier';
 import Quote from './pages/quote';
 import NotFound from './pages/NotFound';
 
