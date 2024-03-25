@@ -1,14 +1,25 @@
+import { useEffect } from "react";
 import Servicecard from "../partials/servicecard";
 import Bookingtrackingcard from "../partials/bookingtrackingcard";
 import Heroslider from "../partials/heroslider";
 import Whychooseus from "../components/whychooseus";
+import usePageTitle from "../Helper/usePageTitle";
 
 const Home = () => {
+
+    //title helper
+ usePageTitle("Sage Express Logistic |  Mini trucks | Packers & Movers | Book and transport easily!");
+
   return (
     <>
       <main id="main">
         <Heroslider />
+
+        {/* 3 cards which is "Get a Quote" , " Track Your Shipment "  , " Become a Delivery Partner "*/}
+        
         <Bookingtrackingcard />
+        
+
         <Servicecard />
 
         {/* channel partner Section */}
